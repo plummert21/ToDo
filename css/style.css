@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+:root {
+    --items-heigth: 8%;
+}
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -24,7 +28,7 @@
     margin-top: 3%;
     padding: 3%;
     width: 80%;
-    height: 5%;
+    height: var(--items-heigth);
     display: grid;
     grid-template-columns: 1fr 0.4fr;
 }
@@ -44,10 +48,11 @@
 }
 
 .items-todo {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     width: 80%;
-    height: 85%;
+    height: var(--items-heigth);
     border-radius: 10px;
     background: #FFF;
-    justify-content: center;
+    align-items: center;
 }
