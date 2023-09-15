@@ -48,6 +48,11 @@
     font-size: 100%;
 }
 
+.items-add__button:hover {
+    cursor: pointer;
+    background: #f3cc3f;
+}
+
 .todo-field {
     width: 80%;
     height: 77%;
@@ -65,13 +70,17 @@
     padding-right: 3%;
     display: grid;
     grid-template-columns: auto 1fr auto;
-    width: 90%;
+    width: 80%;
     height: 10%;
     align-items: center;
     border-radius: 10px;
     font-size: 130%;
     background: #FFEBEB;
     gap: 5%
+}
+
+.todo-field__item:hover {
+    cursor: pointer;
 }
 
 .items-todo__input {
