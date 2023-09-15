@@ -82,3 +82,7 @@
 .items-todo__input {
     transform: scale(150%);
 }
+
+img {
+    width: 60%;
+}
