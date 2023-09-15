@@ -3,15 +3,11 @@
     margin: 0;
 }
 
-/* :root {
-    --items-heigth: 8%;
-} */
-
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 .container {
