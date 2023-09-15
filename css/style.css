@@ -31,8 +31,10 @@
 
 .items-add__input {
     border: none;
-    height: 100%;
+    padding: 3%;
+    height: 68%;
     border-radius: 10px 0px 0px 10px;
+    font-size: 18px;
     background: #FFF;
 }
 
