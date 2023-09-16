@@ -68,4 +68,37 @@ inputBtn.addEventListener('click', () => {
     render()
 })
 
+document.addEventListener('DOMContentLoaded', function () {
+    const taskCheckboxes = document.querySelectorAll('.todo-field .todo-field__item .todo-field__item-input');
+    taskCheckboxes.forEach((checkbox, index) => {
+        checkbox.addEventListener('change', () => {
+            const isChecked = event.target.checked;
+            const taskItems = document.querySelectorAll('.todo-field .todo-field__item');
+            if (isChecked) {
+                taskItems[index].classList.add('todo-field__item-done');
+            } else {
+                taskItems[index].classList.remove('todo-field__item-done');
+            }
+        })
+    })
+})
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const checkboxes = document.querySelectorAll('.task-list-container .task-checkbox'); // Обновляем селектор
+
+//     checkboxes.forEach((checkbox, index) => {
+//         checkbox.addEventListener('change', (event) => {
+//             const isChecked = event.target.checked;
+//             const labels = document.querySelectorAll('.task-list-container .task-label'); // Обновляем селектор
+//             if (isChecked) {
+//                 labels[index].classList.add('task-label-done');
+//             } else {
+//                 labels[index].classList.remove('task-label-done');
+//             }
+//         });
+//     });
+// });
+
+// const taskTrashes = document.querySelectorAll('.todo-field__item .todo-field__item-trash');
+
 render()
