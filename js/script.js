@@ -4,15 +4,15 @@ const todoField = document.getElementById('field')
 
 const TaskList = [
     {
-        text: 'Разметка',
+        text: 'HTML',
         isDone: true
     },
     {
-        text: 'Стили',
+        text: 'CSS',
         isDone: false
     },
     {
-        text: 'Script',
+        text: 'JS',
         isDone: false
     }
 ]
