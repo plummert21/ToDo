@@ -77,14 +77,22 @@
     gap: 5%
 }
 
+.todo-field__item-done {
+    background: #EBFFED;
+}
+
+.todo-field__item-done .todo-field__item-text {
+    text-decoration: line-through;
+}
+
 .todo-field__item:hover {
     cursor: pointer;
 }
 
-.items-todo__input {
+.todo-field__item-input {
     transform: scale(150%);
 }
 
-img {
+.todo-field__item-trash {
     width: 60%;
 }
