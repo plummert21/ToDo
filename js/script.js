@@ -76,8 +76,10 @@ document.addEventListener('DOMContentLoaded', function () {
             const taskItems = document.querySelectorAll('.todo-field .todo-field__item');
             if (isChecked) {
                 taskItems[index].classList.add('todo-field__item-done');
+                TaskList[index].isDone = true
             } else {
                 taskItems[index].classList.remove('todo-field__item-done');
+                TaskList[index].isDone = false
             }
         })
     })
