@@ -16,6 +16,7 @@ const TaskList = [
         isDone: false
     }
 ]
+
 function addItemInTaskList() {
     const item = [
         {
@@ -66,3 +67,5 @@ inputBtn.addEventListener('click', () => {
     }
     render()
 })
+
+render()
