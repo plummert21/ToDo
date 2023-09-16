@@ -40,10 +40,23 @@ function generateFieldTask(obj) {
         elFieldTask.classList.add('todo-field__item-done')
     }
     todoField.appendChild(elFieldTask)
-    const checkbox = document.createElement('input')
-    checkbox.type = "checkbox"
-    elFieldTask.innerText = obj.text
-    elFieldTask.appendChild(checkbox)
+    const taskCheckbox = document.createElement('input')
+    taskCheckbox.type = "checkbox"
+    taskCheckbox.classList.add('todo-field__item-input')
+    if (obj.isDone) {
+        taskCheckbox.checked = true
+    }
+    elFieldTask.appendChild(taskCheckbox)
+    const taskText = document.createElement('p')
+    taskText.classList.add('todo-field__item-text')
+    taskText.innerText = obj.text
+    elFieldTask.appendChild(taskText)
+    const taskImg = document.createElement('img')
+    taskImg.classList.add('todo-field__item-trash')
+    taskImg.src = "/img/trash.svg"
+    taskImg.alt = "Удалить"
+    elFieldTask.appendChild(taskImg)
+
 }
 
 inputBtn.addEventListener('click', () => {
