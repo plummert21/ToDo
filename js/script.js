@@ -1,5 +1,6 @@
 const inputText = document.getElementById('inputText')
 const inputBtn = document.getElementById('inputBtn')
+const todoField = document.getElementById('field')
 
 const TaskList = [
     {
@@ -15,16 +16,36 @@ const TaskList = [
         isDone: false
     }
 ]
+function addItemInTaskList() {
+    const item = [
+        {
+            text: inputText.value,
+            isDone: false
+        }
+    ]
+    TaskList.push(item[0])
+}
+
+function render() {
+    todoField.innerHTML = ''
+    TaskList.forEach(function (item) {
+        generateFieldTask(item)
+    })
+}
+
+function generateFieldTask(obj) {
+    const elFieldTask = document.createElement('div')
+    elFieldTask.classList.add('todo-field__item')
+    if (obj.isDone) {
+        elFieldTask.classList.add('todo-field__item-done')
+    }
+    todoField.appendChild(elFieldTask)
+}
 
 inputBtn.addEventListener('click', () => {
     if (inputText.value.trim()) {
-        const item = [
-            {
-                text: inputText.value,
-                isDone: false
-            }
-        ]
-        TaskList.push(item[0])
+        addItemInTaskList()
         inputText.value = ''
     }
+    render()
 })
