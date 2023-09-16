@@ -40,6 +40,10 @@ function generateFieldTask(obj) {
         elFieldTask.classList.add('todo-field__item-done')
     }
     todoField.appendChild(elFieldTask)
+    const checkbox = document.createElement('input')
+    checkbox.type = "checkbox"
+    elFieldTask.innerText = obj.text
+    elFieldTask.appendChild(checkbox)
 }
 
 inputBtn.addEventListener('click', () => {
