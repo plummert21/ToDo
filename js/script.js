@@ -37,7 +37,7 @@ function addItemInTaskList() {
         isDone: false
     }
     TaskList.push(item);
-    addJSON();
+    addLocalStorage();
 }
 
 function render() {
