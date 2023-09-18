@@ -18,12 +18,10 @@ const TaskList = [
 ]
 
 function addItemInTaskList() {
-    const item = [
-        {
-            text: inputText.value,
-            isDone: false
-        }
-    ]
+    const item = {
+        text: inputText.value,
+        isDone: false
+    }
     TaskList.push(item[0]);
 }
 
