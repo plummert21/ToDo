@@ -47,31 +47,34 @@ function generateFieldTask(obj, index) {
     taskCheckbox.classList.add('todo-field__item-input');
     taskCheckbox.checked = obj.isDone;;
     taskCheckbox.setAttribute('data-number', index);
-    // checkbox.addEventListener('change', () => {
-    //     //     const isChecked = checkbox.checked;
-    //     //     if (isChecked) {
-    //     //         elFieldTask.classList.add('todo-field__item-done');
-    //     //         TaskList[index].isDone = true
-    //     //     } else {
-    //     //         elFieldTask.classList.remove('todo-field__item-done');
-    //     //         TaskList[index].isDone = false
-    //     //     }
-    // })
     // создание текстового поля
     const taskText = document.createElement('p');
     taskText.classList.add('todo-field__item-text');
     taskText.innerText = obj.text;
+    taskText.setAttribute('data-number', index);
     // создание кнопки для удаления элемента Todo
     const taskImg = document.createElement('img');
     taskImg.classList.add('todo-field__item-trash');
     taskImg.src = "/img/trash.svg";
     taskImg.alt = "Удалить";
+    taskImg.setAttribute('data-number', index);
     // Добавление родителя для 3 элементов блока
     elFieldTask.appendChild(taskCheckbox);
     elFieldTask.appendChild(taskText);
     elFieldTask.appendChild(taskImg);
     // Добавление родителя для блока item (отображение на странице)
     todoField.appendChild(elFieldTask);
+    // СОБЫТИЯ ПО НАЖАТИЯМ
+    //// выполнение записи (нажатие checkbox)
+    taskCheckbox.addEventListener(('change'), () => {
+        TaskList[taskCheckbox.dataset.number].isDone = taskCheckbox.checked;
+        render();
+    })
+    //// удаление записи (нажатие img trash)
+    taskImg.addEventListener(('click'), () => {
+        TaskList.splice(taskImg.dataset.number, 1);
+        render();
+    })
 }
 
 inputBtn.addEventListener('click', () => {
@@ -81,22 +84,5 @@ inputBtn.addEventListener('click', () => {
     }
     render();
 })
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const taskCheckboxes = document.querySelectorAll('.todo-field .todo-field__item .todo-field__item-input');
-//     taskCheckboxes.forEach((checkbox, index) => {
-//         checkbox.addEventListener('change', () => {
-//             const isChecked = event.target.checked;
-//             const taskItems = document.querySelectorAll('.todo-field .todo-field__item');
-//             if (isChecked) {
-//                 taskItems[index].classList.add('todo-field__item-done');
-//                 TaskList[index].isDone = true
-//             } else {
-//                 taskItems[index].classList.remove('todo-field__item-done');
-//                 TaskList[index].isDone = false
-//             }
-//         })
-//     })
-// })
 
 render();
