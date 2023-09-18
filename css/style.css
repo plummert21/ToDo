@@ -61,6 +61,7 @@
     gap: 4%;
     border-radius: 10px;
     background: #FFF;
+    overflow-y: auto;
 }
 
 .todo-field__item {
@@ -69,7 +70,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     width: 80%;
-    height: 10%;
+    height: 50px;
     align-items: center;
     border-radius: 10px;
     font-size: 130%;
