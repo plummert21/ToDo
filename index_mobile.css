@@ -6,9 +6,9 @@
 
 .wrapper {
     display: grid;
-    height: 90vh;
-    grid-template-columns: 20vw 60vw 20vw;
-    grid-template-rows: 15vh 60vh 15vh;
+    height: 95vh;
+    grid-template-columns: 5vw 90vw 5vw;
+    grid-template-rows: 5vh 85vh 5vh;
 }
 
 .container {
