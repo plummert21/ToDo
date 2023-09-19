@@ -4,7 +4,7 @@
     border: none;
 }
 
-@media .wrapper {
+.wrapper {
     display: grid;
     height: 90vh;
     grid-template-columns: 20vw 60vw 20vw;
