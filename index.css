@@ -6,6 +6,7 @@
 
 element {
     --btn-font-size: 1.2vw;
+    --btn-font-size-mobile: 2.5vw;
 }
 
 .wrapper {
@@ -95,7 +96,7 @@ element {
     display: flex;
     align-items: center;
     width: 100%;
-    font-size: 1.5vw;
+    font-size: calc(var(--btn-font-size)+0.3vw);
 }
 
 .todoList__item-remove {
@@ -126,4 +127,21 @@ element {
     border-radius: 10px 10px 10px 10px;
     font-size: var(--btn-font-size);
     background: #FFEBEB;
+}
+
+@media screen and (max-device-width:480px) {
+    .wrapper {
+        grid-template-columns: 5vw 90vw 5vw;
+        grid-template-rows: 5vh 80vh 5vh;
+    }
+
+    .form_input__btn,
+    .form_change__btn-checked,
+    .form_change__btn-clear {
+        font-size: var(--btn-font-size-mobile);
+    }
+
+    .todoList__item-info-text {
+        font-size: calc(var(--btn-font-size-mobile)-0.1vw);
+    }
 }
