@@ -4,11 +4,11 @@
     border: none;
 }
 
- .wrapper {
+.wrapper {
     display: grid;
     height: 90vh;
     grid-template-columns: 30vw 40vw 30vw;
-    grid-template-rows: 15vh 60vh 15vh;
+    grid-template-rows: 10vh 70vh 10vh;
 }
 
 .container {
