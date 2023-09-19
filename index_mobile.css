@@ -76,6 +76,7 @@ element {
 .todoList__item-info {
     grid-column: 1 / span 17;
     display: flex;
+    align-items: center;
 }
 
 .todoList__item-info-checkbox {
