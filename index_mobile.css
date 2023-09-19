@@ -95,7 +95,7 @@ element {
     display: flex;
     align-items: center;
     width: 100%;
-    font-size: 1.5vw;
+    font-size: var(--btn-font-size);
 }
 
 .todoList__item-remove {
