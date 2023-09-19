@@ -8,7 +8,7 @@ inputBtn.addEventListener('click', inputBtnClick);
 btnChecked.addEventListener('click', btnCheckedClick);
 btnClear.addEventListener('click', btnClearClick);
 
-const taskList = [
+taskList = [
     // {
     //     text: 'HTML',
     //     isDone: true
@@ -24,7 +24,7 @@ const taskList = [
 ]
 
 function initTaskList() {
-    if (JSON.parse(localStorage.getItem('Todo'))) {
+    if (localStorage.getItem('ToDo').length > 10) {
         taskList = JSON.parse(localStorage.getItem('ToDo'));
     }
 }
