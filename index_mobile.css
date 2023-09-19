@@ -66,14 +66,13 @@
     flex-direction: row;
 }
 
-.todoList__item-checkbox {
-    margin: 1vw;
-}
+.todoList__item-checkbox {}
 
 .todoList__item-text {
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
     font-size: 1.5vw;
 }
 

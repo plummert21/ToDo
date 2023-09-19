@@ -6,28 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
-   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-  <link rel="stylesheet" type="text/css" media="screen and (max-device-width:480px)" href="index_mobile.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+    <link rel="stylesheet" type="text/css" media="screen and (max-device-width:480px)" href="index_mobile.css" /> -->
 </head>
 
 <body>
     <div class="wrapper">
         <div class="container">
             <form class="form_input">
-                <input class="form_input__text"></input>
-                <button class="form_input__btn">Добавить</button>
+                <input id="form_input__text" class="form_input__text"></input>
+                <button id="form_input__btn" class="form_input__btn">Добавить</button>
             </form>
-            <div class="todoList">
-                <div class="todoList__item">
+            <div id="todoList" class="todoList">
+                <!-- <div class="todoList__item">
                     <div class="todoList__item-info">
-                        <input class="todoList__item-checkbox" type="checkbox"></input>
-                        <!-- <div class="todoList__item-text">Task1</div> -->
+                        <input class="todoList__item-info-checkbox" type="checkbox"></input>
+                        <p class="todoList__item-info-text">Task 1</p>
                     </div>
-                    <button class="todoList__item-remove"><img src="/img/trash.svg" alt="Удалить"></button>
+                    <button class="todoList__item-remove">
+                        <img src="/img/trash.svg" alt="Удалить">
+                    </button>
                 </div>
+                <div class="todoList__item todoList__item-done">
+                    <div class="todoList__item-info">
+                        <input class="todoList__item-info-checkbox" type="checkbox"></input>
+                        <div class="todoList__item-info-text">Task 2</div>
+                    </div>
+                    <button class="todoList__item-remove">
+                        <img src="/img/trash.svg" alt="Удалить">
+                    </button>
+                </div> -->
             </div>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
