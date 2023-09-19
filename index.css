@@ -60,6 +60,7 @@ element {
 
 .todoList__item {
     height: 6vh;
+    min-height: 40px;
     display: grid;
     grid-template-columns: repeat(20, 1fr);
     border-radius: 10px;
