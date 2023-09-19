@@ -1,8 +1,12 @@
 const inputText = document.getElementById('form_input__text');
 const inputBtn = document.getElementById('form_input__btn');
 const todoList = document.getElementById('todoList');
+const btnChecked = document.getElementById('form_change__btn-checked');
+const btnClear = document.getElementById('form_change__btn-clear');
 
 inputBtn.addEventListener('click', inputBtnClick);
+btnChecked.addEventListener('click', btnCheckedClick);
+btnClear.addEventListener('click', btnClearClick);
 
 const taskList = [
     // {
@@ -111,6 +115,25 @@ function inputBtnClick(event) {
     if (inputText.value.trim()) {
         addItemInTaskList();
         inputText.value = '';
+    }
+    render();
+}
+
+function btnCheckedClick(event) {
+    event.preventDefault();
+    taskList.forEach(function (item) {
+        item.isDone = true;
+    })
+    render();
+}
+
+function btnClearClick(event) {
+    event.preventDefault();
+    for (let i = 0; i < taskList.length; i++) {
+        if (taskList[i].isDone) {
+            taskList.splice(i, 1);
+            i = -1;
+        }
     }
     render();
 }
